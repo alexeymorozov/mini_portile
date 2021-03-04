@@ -381,6 +381,7 @@ private
   end
 
   def execute(action, command, options={})
+    puts "Command: #{command}"
     log_out    = log_file(action)
 
     Dir.chdir (options.fetch(:cd){ work_path }) do
